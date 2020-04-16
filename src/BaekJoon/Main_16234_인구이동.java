@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 /*
  * 인구이동 횟수 출력
  * 인접 인구 차이가 L 이상 R 이하일 경우에 국경 열림
- * 열린애들끼리 평균을 냄
+ * 열린united끼리 평균을 냄
  * 
  * */
 
