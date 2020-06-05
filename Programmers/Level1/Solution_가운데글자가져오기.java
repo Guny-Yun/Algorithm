@@ -1,4 +1,4 @@
-package programmers;
+package Level1;
 
 public class Solution_가운데글자가져오기 {
 	static String s = "abcdef";
