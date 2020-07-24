@@ -8,14 +8,17 @@ public class Solution_구명보트 {
 	public static void main(String[] args) {
 		Arrays.sort(people);
 		int answer = 0;
-		int tmp = limit;
-		for(int i = 0 ; i < people.length;i++) {
-			tmp -= people[i];
-			answer ++;
-			if(tmp <= 0) {
-				tmp = limit;
+		int light = 0;
+		int heavy = people.length - 1;
+		while(light <= heavy) {
+			if(people[light] + people[heavy] <= limit) {
+				light++;
 			}
+			heavy--;
+			
+			answer++;
 		}
+		
 		System.out.println(answer);
 	}
 
