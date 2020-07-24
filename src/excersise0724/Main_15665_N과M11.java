@@ -28,11 +28,11 @@ public class Main_15665_N과M11 {
 		}
 		list = new ArrayList<>(ts);
 
-		dfs(0, list.get(0));
+		dfs(0);
 		System.out.println(sb.toString());
 	}
 
-	public static void dfs(int v, int value) {
+	public static void dfs(int v) {
 		if (v == M) {
 			for (int i = 0; i < v; i++) {
 				sb.append(res[i] + " ");
@@ -42,7 +42,7 @@ public class Main_15665_N과M11 {
 		}
 		for (int i = 0; i < list.size(); i++) {
 			res[v] = list.get(i);
-			dfs(v + 1, list.get(i));
+			dfs(v + 1);
 		}
 	}
 }
