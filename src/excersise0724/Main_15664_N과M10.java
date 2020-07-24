@@ -30,7 +30,7 @@ public class Main_15664_N과M10 {
 		dfs(0, list.get(0));
 		System.out.println(sb.toString());
 	}
-	public static void dfs(int v, int value) {
+	public static void dfs(int v, int start) {
 		if (v == M) {
 			for (int i = 0; i < v; i++) {
 				sb.append(res[i] + " ");
@@ -39,7 +39,7 @@ public class Main_15664_N과M10 {
 			return;
 		}
 		for(int i = 0 ; i < list.size();i++) {
-			if(num[list.get(i)] > 0 && list.get(i) >= value) {
+			if(num[list.get(i)] > 0 && list.get(i) >= start) {
 				num[list.get(i)]--;
 				res[v] = list.get(i);
 				dfs(v+1, list.get(i));
