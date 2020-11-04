@@ -15,9 +15,11 @@ public class Main_2751_수정렬하기2 {
             data.add(Integer.parseInt(br.readLine()));
         }
         Collections.sort(data);
+        StringBuilder sb = new StringBuilder(); 
         for(int i=0; i<n; i++) {
-            System.out.println(data.get(i));
+        	sb.append(data.get(i) + "\n");
         }
+        System.out.println(sb);
 	}
 
 }
