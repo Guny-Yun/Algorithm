@@ -3,7 +3,7 @@ package Level3;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Solution_과속카메라 {
+public class Solution_단속카메라 {
 
 	public static void main(String[] args) {
 		int[][] routes = {{},{},{},{}};
