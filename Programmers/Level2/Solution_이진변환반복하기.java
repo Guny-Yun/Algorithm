@@ -20,5 +20,7 @@ public class Solution_이진변환반복하기 {
 		}
 		answer[0] = cnt;
 		answer[1] = zero_cnt;
+		
+		System.out.println(answer[0] + " " + answer[1]);
 	}
 }

@@ -1,36 +1,37 @@
 package BaekJoon;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main_13702_이상한술집 {
-
-	public static void main(String[] args) throws Exception{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		int N = Integer.parseInt(st.nextToken());
-		int K = Integer.parseInt(st.nextToken());
-		
-		int[] arr = new int[N];
-		
-		for(int i = 0 ; i < N;i++) {
-			arr[i] = Integer.parseInt(br.readLine());
-		}
-		Arrays.parallelSort(arr);
-		int s = 0;
-		int e = arr[N-1];
-		int mid = 0;
-		while(s < e) {
-			mid = (s+e) / 2;
-			int tmp = 0;
-			for(int i = 0 ; i < N;i++) {
-				tmp += arr[i] / mid;
-			}
-			if(tmp < K) e = mid;
-			else s = mid + 1;
-		}
-		System.out.println(e-1);
-	}
+    private static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    public static void main(String args[]) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int NK[] = new int[2];
+        int i = 0;
+        while (st.hasMoreTokens()) {
+            NK[i++] = Integer.parseInt(st.nextToken());
+        }
+        int arr[] = new int[NK[0]];
+        for (i = 0; i < NK[0]; i++) { 
+            arr[i] = Integer.parseInt(br.readLine());
+        }
+        Arrays.sort(arr);
+        long l = 0;
+        long r = arr[NK[0] - 1];
+        long mid = 0;
+        while (l < r) {
+            mid = (l + r) / 2;
+            int K = 0;
+            for (i = 0; i < NK[0]; i++) {
+                K += arr[i] / mid;
+            }
+            if (K < NK[1]) r = mid;
+            else l = mid + 1;
+        }
+        bw.write(String.valueOf(r - 1));
+        bw.flush();
+    }
 }
