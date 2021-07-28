@@ -31,5 +31,6 @@ public class Main_1009_분산처리 {
 			if(answer == 0)answer = 10;
 			System.out.println(answer);
 		}
+		
 	}
 }
