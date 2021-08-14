@@ -15,6 +15,6 @@ public class Main_1436_영화감독숌 {
 			num++;
 			if(String.valueOf(num).contains("666"))cnt++;
 		}
-		System.out.println(num);;
+		System.out.println(num);
 	}
 }
